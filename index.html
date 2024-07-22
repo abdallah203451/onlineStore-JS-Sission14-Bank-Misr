@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <link rel="stylesheet" href="styles.css" /> -->
+    <script src="index.js" defer></script>
+  </head>
+  <body class="bg-gray-100">
+    <header class="flex bg-blue-500 p-4 text-white">
+      <a class="mr-auto" href="./index.html"
+        ><h1 class="text-2xl">Online Store</h1></a
+      >
+      <a href="./cart.html"
+        ><div><i class="fa-solid fa-cart-shopping text-2xl"></i></div
+      ></a>
+    </header>
+    <main class="container mx-auto p-4">
+      <div class="flex justify-between items-center mb-4">
+        <input
+          id="searchInput"
+          type="text"
+          placeholder="Search products..."
+          class="border p-2 w-1/3"
+        />
+        <select id="filterType" class="border p-2 w-1/4">
+          <option value="">All Types</option>
+          <!-- Add options dynamically -->
+        </select>
+        <select id="sortPrice" class="border p-2 w-1/4">
+          <option value="asc">Price: Low to High</option>
+          <option value="desc">Price: High to Low</option>
+        </select>
+      </div>
+      <div
+        id="products"
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4"
+      >
+        <!-- Products will be displayed here -->
+      </div>
+      <div
+        id="productDetails"
+        class="hidden fixed inset-0 bg-gray-800 bg-opacity-75 flex items-center justify-center"
+      >
+        <!-- Product details will be displayed here -->
+      </div>
+      <div id="cart" class="fixed bottom-4 right-4 bg-white p-4 shadow-lg">
+        <button id="toggleCart"><h2 class="text-xl">Cart</h2></button>
+        <div id="cartItems">
+          <!-- Cart items will be displayed here -->
+        </div>
+      </div>
+    </main>
+    <script src="store.js"></script>
+  </body>
+</html>
